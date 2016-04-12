@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println(Boostrap.componentDescriptor.toString());
 
-        System.out.println("By master Falindir");
+        System.out.println("Bye master Falindir");
 
     }
 }
