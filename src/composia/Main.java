@@ -16,5 +16,10 @@ public class Main {
 
         System.out.println("By master Falindir");
 
+        Object o = new Object();
+
+        System.out.println(o.getClass().getName());
+
+
     }
 }

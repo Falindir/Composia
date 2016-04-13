@@ -9,6 +9,8 @@ public class Descriptor extends Component {
 
     private Descriptor superDescriptor;
 
+
+
     public Descriptor(String name, Descriptor superDescriptor) {
         super("Descriptor");
         this.name = name;

@@ -1,8 +1,9 @@
 package composia.core;
 
-import composia.core.port.DefaultPort;
-import composia.core.port.SelfPort;
-import composia.core.port.SuperPort;
+import composia.core.port.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by jimmy on 09/04/16.
@@ -11,11 +12,17 @@ public class Component {
 
     private Descriptor descriptor;
 
-    private DefaultPort defaultP;
+    private DefaultPort defaultP = new DefaultPort();
 
-    private SuperPort superP;
+    private SuperPort superP = new SuperPort();
 
-    private SelfPort self;
+    private SelfPort self = new SelfPort();
+
+    private Map<String, InternalRequiredPort> internalRequiredPorts = new HashMap<String, InternalRequiredPort>();
+
+    private Map<String, InternalProvidedPort> internalProvidedPorts = new HashMap<String, InternalProvidedPort>();
+
+    private Map<String, ExternalRequiredPort> externalRequiredPorts = new HashMap<String, ExternalRequiredPort>();
 
     public Component(Descriptor descriptor) {
         this.descriptor = descriptor;
